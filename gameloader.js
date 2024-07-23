@@ -2,20 +2,20 @@ if (!window.top.location.href.startsWith("https://skybase-alpha.github.io/")) {
   document.querySelector("title").innerHTML = "Google";
   function hidey() {
     var theURL = prompt(
-      "Please enter a URL to show in your history instead of Shadow's Games\r\nMake sure to include https:// or http://\r\nLeave blank for Google Classroom"
+      "Please enter a URL to show in your history instead of Shadow's Games\r\nMake sure to include https:// or http://\r\nLeave blank for Microsoft Teams"
     );
     var tabBar = prompt(
-      "Please select a tab disguise by typing the corresponding letter\r\nLeave blank for Google Classroom\r\nc - Google Classroom\r\ng - Google\r\nb - Blank\r\nt - Custom"
+      "Please select a tab disguise by typing the corresponding letter\r\nLeave blank for Microsoft Teams\r\no - OnGuard\r\nc - Compass\r\nb - Blank\r\nt - Custom"
     );
     if (tabBar !== "c" && tabBar !== "g" && tabBar !== "t" && tabBar !== "b") {
-      var tabIcon = "https://ssl.gstatic.com/classroom/favicon.png";
-      var tabName = "Classes";
+      var tabIcon = "https://statics.teams.cdn.office.net/evergreen-assets/icons/microsoft_teams_logo_refresh.ico";
+      var tabName = "Teams and Channels | General | Microsoft Teams";
+    } else if (tabBar == "o") {
+      var tabIcon = "https://onguardv3.com.au/favicon.png";
+      var tabName = "Education Portal | OnGuard v3 NeXT GeN";
     } else if (tabBar == "c") {
-      var tabIcon = "https://ssl.gstatic.com/classroom/favicon.png";
-      var tabName = "Classes";
-    } else if (tabBar == "g") {
-      var tabIcon = "https://google.com/favicon.ico";
-      var tabName = "Google";
+      var tabIcon = "https://clontarfbeachshs-qld.compass.education/Assets/Pix/favicon_v11855.png";
+      var tabName = "Home | Compass";
     } else if (tabBar == "t") {
       var tabIcon = prompt("URL for icon:");
       var tabName = prompt("Tab Name");
@@ -45,14 +45,14 @@ if (!window.top.location.href.startsWith("https://skybase-alpha.github.io/")) {
         window.location.href +
         '"frameborder="0" allowfullscreen></iframe></body></html>';
       if (theURL == "" || theURL == null) {
-        window.location.replace("https://classroom.google.com/h");
+        window.location.replace("https://teams.microsoft.com/v2");
       } else {
         window.location.replace(theURL);
       }
     }
   }
 } else {
-  alert("this site is poopoo");
+  alert("Ignore this Site!");
   window.close();
 }
 function gameHide(gamePath) {
